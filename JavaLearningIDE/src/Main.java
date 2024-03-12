@@ -60,12 +60,12 @@ public class Main {
             System.out.println("x variable " + x + " scope is here");
             System.out.println("In scope accessible for x variable");
         } else {
-            System.out.println("Your desired number is less than 5");
+            System.out.println("Your desired number is less than or equal to 5");
 
             System.out.println("Out of scope and not accessible for x variable");
         }
 
-        
+
         // While Loop
         boolean repeatSong = true;
         Scanner inputPlay = new Scanner(System.in);
@@ -86,5 +86,34 @@ public class Main {
             System.out.println("i = " + i);
         }
 
+        // Multiple choice questions and answer
+        char correctAnswer = 'C';
+        int triedTimes = 0;
+        boolean canTry = true;
+
+        System.out.println("Please pick a correct answer from choices for a below question:");
+        System.out.println("What is the current year?");
+        System.out.println("A: 2023");
+        System.out.println("B: 2014");
+        System.out.println("C: 2024");
+
+
+        while ( canTry ) {
+            Scanner inputAnswer = new Scanner(System.in);
+            String userAnswer = inputAnswer.next();
+
+            if (correctAnswer == userAnswer.toUpperCase().charAt(0)) {
+                System.out.println("Congrts, your answer is correct!!");
+                canTry = false;
+            } else {
+                System.out.println("Sorry, try again (You have 2 chances only)");
+
+                triedTimes++;
+                if ( triedTimes>=2 ){
+                    System.out.println("Sor2.ry, You have consumed your maximum tries.");
+                    canTry = false;
+                }
+            }
+        }
     }
 }
