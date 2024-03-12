@@ -48,6 +48,39 @@ public class Main {
         System.out.println("Your full name is:" + GPA);
 
 
+        // Relational Operators > < == >= <= !=
+        System.out.println("Enter your desired number:");
+        Scanner inputNumber = new Scanner(System.in);
+        int desiredNumber = inputNumber.nextInt();
+        if (desiredNumber > 5) {
+            System.out.println("Your desired number is greater than 5");
+
+            // scope of x variable
+            int x = 10;
+            System.out.println("x variable " + x + " scope is here");
+            System.out.println("In scope accessible for x variable");
+        } else {
+            System.out.println("Your desired number is less than 5");
+
+            System.out.println("Out of scope and not accessible for x variable");
+        }
+
+        
+        // While Loop
+        boolean repeatSong = true;
+        Scanner inputPlay = new Scanner(System.in);
+        while (repeatSong) {
+            System.out.println("Playing current song...");
+            System.out.println("Do you want to continue? if so enter yes ..");
+            String wantedToContinue = input.next();
+
+            if ( !wantedToContinue.equals("yes") ) {
+                repeatSong = false;
+            }
+        }
+        System.out.println("Playing next song...");
+
+
         // For Loop
         for (int i = 1; i <= 5; i++) {
             System.out.println("i = " + i);
